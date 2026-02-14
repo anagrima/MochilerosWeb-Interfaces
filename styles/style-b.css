@@ -1,0 +1,246 @@
+.usuario-b {
+  padding: 15px;  /*espacio interno*/
+  display: flex;  /*activa flexbox para poner los elementos en columna*/
+  flex-direction: column;   /*organiza en columna*/
+}
+.usuario-nombre {
+  margin: 0;    /*quita margen por defecto*/
+  margin-bottom: 10px;    /*margen por debajo*/
+  font-size: 19px;    /*tamaño letra*/
+}
+.usuario-h3 {
+  margin: 0;  /*quita margen por defecto*/
+  margin-bottom: 10px;    /*margen por debajo*/
+}
+.usuario-info {
+  gap: 25px;  /*separacion horizontal entre los elementos*/
+  display: flex; /*activa flexbox para poner los elementos en fila*/
+}
+.icono-usuario {  
+  width: 100px; /*ancho*/
+  height: 100px;  /*alto*/
+  margin-bottom: 0px; /*margen por debajo*/
+}
+.cerrar-sesion {
+  display: block; /*para que ocupe toda la linea*/
+  width: 100%;  /*ocupa todo el ancho del contenedor*/
+  height: fit-content;  /*ajusta la altura al contenido*/
+  align-self: center; /*centra el boton*/
+  background-color: #e3e1e1;  /*color de fondo*/
+  border: 1.5px solid #6a6a6a;  /*borde*/
+  color: rgb(0, 0, 0);  /*color letra*/
+  font-weight: bold;  /*negrita*/
+  padding: 10px;  /*espacio interno*/
+  border-radius: 10px;  /*redondeado*/
+  transition: 0.3s; /*transicion para hover*/
+  cursor: pointer;  /*cambia el cursor al pasar por encima*/
+}
+.cerrar-sesion:hover {
+  background-color: #a1a1a1;  /*color al pasar el raton*/
+}
+
+.busqueda {
+  padding: 5px 15px;  /*espacio interno*/
+  display: flex;  /*activa flexbox para poner los elementos en columna*/
+  flex-direction: column;  /*organiza en columna*/
+}
+.filtros {
+  margin-bottom: 10px;  /*margen por debajo*/
+  font-size: 16px;  /*tamaño letra*/
+  display: grid;  /*activa grid para poner los elementos en filas y columnas*/
+  grid-template-columns: repeat(3, 1fr);  /*3 columnas de igual tamaño*/
+  gap: 8px; /*separacion entre filas y columnas*/
+}
+.filtros label {
+  cursor: pointer; /*cambia el cursor al pasar por encima*/
+}
+.barra-busqueda {
+  position: relative; /*para colocar el icono dentro del input*/
+  display: inline-block;  /*para que el contenedor se ajuste al contenido*/
+  gap: 5px; /*separacion horizontal entre los elementos*/
+  margin-top: 10px;  /*margen por encima*/
+  margin-bottom: 10px;  /*margen por debajo*/
+}
+.barra-busqueda input {
+  padding: 8px 10px 8px 35px; /*espacio para el icono*/
+  border: 1px solid #bababa; /*color borde*/
+  border-radius: 10px; /*redondeado*/
+}
+.barra-busqueda img {
+  margin-top: 1.5px; /*margen por encima*/
+  width: 20px; /*ancho*/
+  height: 20px; /*alto*/
+  position: absolute; /*para colocar el icono dentro del input*/
+  left: 8px; /*posicion horizontal*/
+  top: 40%; /*posicion vertical*/
+  transform: translateY(-50%); /*centra verticalmente*/
+  pointer-events: none; /*para que no interfiera con el input*/
+}
+.consejo {
+  position: relative; /*para colocar el boton dentro del input*/
+  box-sizing: border-box; /*incluye el borde en el tamaño total*/
+  display: inline-block; /*para que el contenedor se ajuste al contenido*/
+  gap: 5px; /*separacion horizontal entre los elementos*/
+  margin-top: 10px; /*margen por encima*/
+  margin-bottom: 10px; /*margen por debajo*/
+}
+.input-busqueda {
+  border: 1px solid #bababa; /*color borde*/
+  border-radius: 10px; /*redondeado*/
+  padding: 8px; /*espacio interno*/
+  width: fit-content; /*ajusta el ancho al contenido*/
+}
+.consejo input{
+  border: 1px solid #bababa; /*color borde*/
+  border-radius: 10px; /*redondeado*/
+  padding: 8px; /*espacio interno*/
+}
+.consejo button{
+  background-color: #e3e1e1; /*color de fondo*/
+  border: 1.5px solid #6a6a6a; /*color borde*/
+  color: rgb(0, 0, 0); /*color letra*/
+  font-weight: bold; /*negrita*/
+  padding: 8px; /*espacio interno*/
+  border-radius: 10px; /*redondeado*/
+  transition: 0.3s; /*transicion para hover*/
+  margin-left: 10px; /*margen a la izquierda*/
+  align-self: flex-end; /*alinea el boton a la derecha*/
+  cursor: pointer; /*cambia el cursor al pasar por encima*/
+}
+.consejo button:hover {
+  background-color: #a1a1a1; /*color al pasar el raton*/
+}
+
+
+/*calendario*/
+.calendario {
+  width: 100px; /*ancho del calendario*/
+  border-collapse: collapse; /*quita espacio entre celdas*/
+  background: white; /*color de fondo*/
+  overflow: hidden; /*lo que sobra lo oculta*/
+  align-self: center;   /*centra el calendario*/
+  margin: 15px auto 20px auto;  /*margen arriba, derecha, abajo e izquierda*/
+  font-size: 14px; /*tamaño letra*/
+}
+
+/*calendario mes*/
+.calendario th {
+  color: black; /*color letra*/
+  background: rgb(164, 196, 154); /*color de fondo*/
+  font-weight: bold; /*negrita*/
+  border: 2px solid #1e2e1f; /*borde*/
+  border-right: none; /*quita borde derecho*/
+  border-left: none; /*quita borde izquierdo*/
+}
+
+/*calendario celdas*/
+.calendario td {
+  padding: 4px; /*espacio interno*/
+  height: 10px; /*altura fija*/
+  vertical-align: top; /*alineacion vertical arriba*/
+  text-align: right; /*alineacion horizontal derecha*/
+}
+.calendario td.especial {
+  background: rgb(164, 196, 154); /*color de fondo*/
+  border-radius: 50%; /*redondeado*/
+  font-weight: bold; /*negrita*/
+}
+.calendario td.especial:hover {
+  background: rgb(143, 163, 137); /*color al pasar el raton*/
+}
+
+/*bordes calendario*/
+.calendario td:nth-child(7) {
+  border-right: 2px solid #1e2e1f; /*borde derecho*/
+  color: #a52a2a; /*color letra*/
+}
+.calendario td:nth-child(6) {
+  color: #a52a2a; /*color letra*/
+}
+.calendario td:nth-child(1) {
+  border-left: 2px solid #1e2e1f; /*borde izquierdo*/
+}
+.calendario tr:last-child td {
+  border-bottom: 2px solid #1e2e1f; /*borde inferior*/
+}
+.calendario th:first-child {
+  border-left: 2px solid #1e2e1f; /*borde izquierdo*/
+}
+.calendario th:last-child {
+  border-right: 2px solid #1e2e1f; /*borde derecho*/
+}
+
+/*calendario efecto con el raton*/
+.calendario td:hover {
+  background: #d4d4d4;
+  border-radius: 50%; /*redondeado*/
+}
+
+/*modal de cierre de sesion y parte de consejos */
+.modal-overlay{
+  position: fixed; /*fija en la pantalla*/
+  inset: 0; /*ocupa toda la pantalla*/
+  display: flex; /*activa flexbox*/
+  align-items: center; /*centra verticalmente*/
+  justify-content: center; /*centra horizontalmente*/
+  background: rgba(0,0,0,0.5); /*fondo semitransparente*/
+  z-index: 9999; /*por encima de todo*/
+}
+.modal-confirm{
+  background: #fff; /*color de fondo*/
+  padding: 20px; /*espacio interno*/
+  border-radius: 6px; /*redondeado*/
+  max-width: 320px; /*ancho maximo*/
+  width: 90%; /*ancho relativo*/
+  text-align: center; /*centra el texto*/
+  box-shadow: 0 6px 18px rgba(0,0,0,0.15); /*sombra*/
+}
+.modal-actions{
+  margin-top: 12px; /*margen por encima*/
+  display: flex; /*activa flexbox*/
+  gap: 8px; /*separacion entre botones*/
+  justify-content: center; /*centra los botones*/
+}
+.modal-actions button{
+  padding: 8px 12px; /*espacio interno*/
+  cursor: pointer; /*cambia el cursor al pasar por encima*/
+  border: none; /*quita el borde*/
+}
+.modal-confirmar{
+  font-weight: bold; /*negrita*/
+  background: rgb(164, 196, 154); /*color de fondo*/
+  color: #000000; /*color letra*/
+  border-radius: 4px; /*redondeado*/
+}
+.modal-cancelar{
+  background: #e0e0e0; /*color de fondo*/
+  border-radius: 4px; /*redondeado*/
+}
+/*modal de consejos*/
+.modal-advice .modal-title{
+  margin: 0 0 8px 0; /*margen arriba, derecha, abajo e izquierda*/
+  font-size: 18px; /*tamaño letra*/
+  font-weight: bold; /*negrita*/
+}
+.modal-advice .modal-text{
+  text-align: left; /*alineacion izquierda*/
+  line-height: 1.4; /*interlineado*/
+  max-height: 45vh; /*altura maxima*/
+  overflow-y: auto; /*scroll vertical si es necesario*/
+}
+.modal-advice .modal-close{
+  background: rgb(164, 196, 154); /*color de fondo*/
+  font-weight: bold; /*letra en negrita*/
+  border-radius: 4px; /*redondeado*/
+  border: none; /*sin borde*/
+  padding: 8px 12px; /*espacio interno*/
+  cursor: pointer; /*cambia el cursor al pasar por encima*/
+}
+
+.lista-consejos a {
+  display: inline-block;  /*bloque en linea*/
+  max-width: 100%;       /*ancho maximo al 100% del contenedor*/
+  white-space: normal;     /*permite saltos de linea normales*/
+  word-break: break-word;  /*rompe las palabras largas si no caben*/
+  overflow-wrap: anywhere; /*fuerza el ajuste de texto dentro del ancho*/
+}
