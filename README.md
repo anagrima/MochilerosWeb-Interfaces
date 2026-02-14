@@ -1,5 +1,5 @@
-# autores
-Ana Grima Vázquez de Prafa y Diego Fernandez Gonzalez
+# Autores
+Ana Grima Vázquez de Prada y Diego Fernandez Gonzalez
 
-# aclaraciones
+# Aclaraciones
 La pagina no esta terminada y le faltan funcionalidades.
